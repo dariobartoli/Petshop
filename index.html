@@ -1,0 +1,114 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Mufasa PetShop - Home</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+      <link rel="stylesheet" href="/assets/style/style.css">
+      <link rel="shortcut icon" href="./assets/img/Favicon.png" type="image/x-icon">
+  </head>
+  <body id="app">
+      <header>
+          <div class="bgColor1 p-3">
+              <nav class="navbar navbar-expand-lg container">
+                  <div class="container-fluid d-flex">
+                          <a class="navbar-brand" href="#"><img src="/assets/img/LogoPetShop.png" alt="logo" width="100" height="50"></a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+                          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                      <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-end fs-5 d-flex justify-content-end flex align-items-center ">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./assets/juguetes.html">Juguetes</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./assets/farmacia.html">Farmacia</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./assets/contactanos.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./assets/carritoCompra.html"><img src="./assets/img/Icono-Carrito-De-Compra.png" alt="carrito" width="40" height="35"></a>
+                        </li>
+                      </ul>
+                      
+                    </div>
+                  </div>
+                </nav>
+          </div>
+      </header>
+  <!-- collapse navbar-collapse d-flex justify-content-end flex -->
+  <main class="bgColor2">
+      <div>
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner carouselMedidas">
+                <div class="carousel-item active picado">
+                  <img src="./assets/img/perro1.jpg" class="d-flex align-items-center centerImage" alt="perro">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/img/perro2.jpg" class="d-flex align-items-center centerImage" alt="perro">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/img/perro3.jpg" class="d-flex align-items-center centerImage" alt="perro">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+      </div>
+      <div class="container d-flex justify-content-center flex-wrap mt-5">
+          <h1>Bienvenido a Mufasa Pet-Shop</h1>
+          <p class="text-center pt-4"> 
+              Aca en Pet-Shop Mufasa nos encargamos de cuidar y proteger a nuestras hermosas mascotas.
+              Contamos Actualemente con una unica sucursal en Argentina y pronto en muchos mas lugares 
+          </p>
+          <p class="text-center pt-1">
+              Podes contactarnos en nuestra pagina de Contactos o Visitar nuestras redes para ver el cariño que le ponemos a nuestras mascotas
+          </p>
+      </div>
+
+
+  </main>
+
+
+
+
+
+
+
+  <footer class="bgColor1">
+      <a class="navbar-brand" href="#"><img src="/assets/img/LogoPetShop.png" alt="logo" width="80" height="50"></a>
+      <div class="pt-4 text-center">
+              <h4>  Encuentranos en nuestra Sucursal  </h4>
+              <a href="https://goo.gl/maps/RpfnVNW8wtp4EABW7"> Rio de Janeiro 300 (Caballito)</a>           
+      </div>
+      <div class="pt-4">
+              <h4>Nuestras Redes Sociales</h4>
+              <div class="d-flex justify-content-center"> 
+                  <a href="https://www.facebook.com/groups/1480947855467444"><img src="./assets/img/LogoFacebook.png" alt="LogoFacebook" width="70"></a>
+                  <a href="https://www.instagram.com/riopetshopkg/"><img src="./assets/img/LogoInstagram.png" alt="LogoFacebook" width="100"></a>
+              </div>
+      </div>
+      <div class="text-center pt-5">
+          <p>Todos Los derechos reservados por la Pagina "Mufasa PetShop".</p>
+      </div>
+  </footer>
+
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/vue@3"></script>
+      <script src="./main.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mufasa PetShop - Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <link rel="shortcut icon" href="./img/Favicon.png" type="image/x-icon">
+</head>
+<body id="app">
+    <header>
+        <div class="bgColor1 p-3">
+            <nav class="navbar navbar-expand-lg container">
+                <div class="container-fluid d-flex">
+                        <a class="navbar-brand" href="../index.html"><img src="/assets/img/LogoPetShop.png" alt="logo" width="100" height="50"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-end fs-5 d-flex justify-content-end flex align-items-center ">
+                      <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./juguetes.html">Juguetes</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./farmacia.html">Farmacia</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./contactanos.html">Contacto</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="./carritoCompra.html"><img src="./img/Icono-Carrito-De-Compra.png" alt="carrito" width="40" height="35"></a>
+                      </li>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </header>
+    <main class="MainCompra">
+      <header class="text-center pt-4">
+          <h3>Su Lista del Carrito</h3>
+      </header>
+        <section class="d-flex flex-row align-items-center justify-content-center">
+            <div class="compraBox">
+              <div class="ContainerCompra">
+                <div class="d-flex flex-row align-items-center justify-content-center flex-wrap gap-3 containerChico p-2">
+                  <div class="card cartasCompra" v-for="producto of carritoCompra">
+                    <div class="imagen-contenedor">
+                      <img :src="producto.imagen" :alt="producto.nombre" class="card-img-top">
+                    </div>
+                    <h3 class="fs-5">{{producto.nombre}}</h3>
+                    <div class="d-flex flex-row align-items-end justify-content-center textooooo">
+                        <p class="text-danger text-center me-3">Precio:{{producto.precio}}</p>
+                      </div>
+                      <button @:click="quitarCarrito(producto)" class="btn btn-danger">Eliminar</button>
+                    </div>
+                  <div v-show="carritoCompra.length == 0" class="text-danger fs-1 text-center"><p>No hay productos en el carro de compra</p></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <article class="text-center pt-4">
+              <h2 class="text-dark">Total de su compra: <span class="text-success">{{totalCompra}}$</span></h2>
+              
+          </article>
+    </main>
+    <footer class="bgColor1">
+        <a class="navbar-brand" href="#"><img src="../assets/img/LogoPetShop.png" alt="logo" width="80" height="50"></a>
+        <div class="pt-4 text-center">
+                <h4>Encuentranos en nuestra Sucursal</h4>
+                <a href="https://goo.gl/maps/RpfnVNW8wtp4EABW7"> Rio de Janeiro 300 (Caballito)</a>           
+        </div>
+        <div class="pt-4">
+                <h4>Nuestras Redes Sociales</h4>
+                <div class="d-flex justify-content-center"> 
+                    <a href="https://www.facebook.com/groups/1480947855467444"><img src="../assets/img/LogoFacebook.png" alt="LogoFacebook" width="70"></a>
+                    <a href="https://www.instagram.com/riopetshopkg/"><img src="../assets/img/LogoInstagram.png" alt="LogoFacebook" width="100"></a>
+                </div>
+        </div>
+        <div class="text-center pt-5">
+            <p>Todos Los derechos reservados por la Pagina "Mufasa PetShop".</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="../main.js"></script>
+</body>
+</html>
